@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout con Position</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      z-index: 1000;
+    }
+    
+    .container {
+      position: relative;
+      margin-top: 80px;
+      padding-bottom: 60px;
+    }
+    
+    .sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+    
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+    }
+    
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Encabezado Fijo</h1>
+  </header>
+  
+  <div class="container">
+    <div class="sidebar">
+      <h2>Barra Lateral</h2>
+      <ul>
+        <li><a href="#">Enlace 1</a></li>
+        <li><a href="#">Enlace 2</a></li>
+        <li><a href="#">Enlace 3</a></li>
+      </ul>
+    </div>
+    
+    
+    <div class="content">
+      <h2>Contenido Principal</h2>
+      <p>
+        Este es un ejemplo de layout utilizando la propiedad <code>position</code>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore assumenda alias facilis libero obcaecati nisi beatae quisquam eaque maxime illum?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sapiente fugiat perspiciatis doloribus optio architecto pariatur enim quod quis necessitatibus.
+      </p>
+    </div>
+  </div>
+  
+  <footer>
+    <p>Pie de Página Fijo</p>
+  </footer>
+</body>
+</html>
